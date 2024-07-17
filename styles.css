@@ -1,0 +1,108 @@
+body {
+    background-color: #bd9bbf;
+    font-family: 'Helvetica', sans-serif;
+    text-align: center;
+    color: #880e4f;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    animation: fadeIn 2s ease-in-out, colorChange 5s infinite;
+}
+
+p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.gallery img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+body::before {
+    content: '';
+    background-image: url('https://cdn.pixabay.com/photo/2015/11/16/22/14/pink-1045446_960_720.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+h1::before {
+    content: '❤️';
+    font-size: 0.5em;
+    vertical-align: middle;
+    color: #e91e63;
+}
+
+p::before {
+    content: '💖';
+    font-size: 0.5em;
+    vertical-align: middle;
+    color: #e91e63;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        color: #880e4f;
+    }
+    25% {
+        color: #d81b60;
+    }
+    50% {
+        color: #e91e63;
+    }
+    75% {
+        color: #f06292;
+    }
+    100% {
+        color: #880e4f;
+    }
+}
+
